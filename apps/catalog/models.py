@@ -60,6 +60,7 @@ class Product(models.Model):
     )
     image = models.ImageField(upload_to=product_image_upload_path, blank=True, null=True,
                               verbose_name="Изображение товара")
+    quantity = models.PositiveIntegerField(default=0, verbose_name="Количество в наличии")
 
     class Meta:
         verbose_name = "Товар"

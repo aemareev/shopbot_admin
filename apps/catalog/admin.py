@@ -30,13 +30,11 @@ class ProductAdmin(admin.ModelAdmin):
     """
     Админка для модели Product.
     """
-    list_display = (
-        'name', 'price', 'subcategory', 'get_category', 'image_preview'
-    )  # Поля, которые будут отображаться в списке
-    list_filter = ('subcategory__category', 'subcategory')  # Фильтры по полям
-    search_fields = ('name', 'description', 'subcategory__name')  # Поля, по которым можно искать
-    list_per_page = 20  # Количество элементов на странице
-    readonly_fields = ('image_preview',)  # Поле для предпросмотра изображения
+    list_display = ('name', 'price', 'subcategory', 'get_category', 'image_preview', 'quantity')
+    list_filter = ('subcategory__category', 'subcategory')
+    search_fields = ('name', 'description', 'subcategory__name')
+    list_per_page = 20
+    readonly_fields = ('image_preview',)
 
     @admin.display(description='Категория')
     def get_category(self, obj):
