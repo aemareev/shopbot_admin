@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class TelegramUser(models.Model):
+class TelegramClient(models.Model):
     """
     Модель для хранения информации о пользователях Telegram-бота.
     """

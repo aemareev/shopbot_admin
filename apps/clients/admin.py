@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from apps.clients.models import TelegramUser
+from apps.clients.models import TelegramClient
 
 
-@admin.register(TelegramUser)
+@admin.register(TelegramClient)
 class TelegramUserAdmin(admin.ModelAdmin):
     """Отображение пользователей Telegram в админке."""
 
